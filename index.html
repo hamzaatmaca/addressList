@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Address List</title>
+</head>
+
+<body>
+    <!---- MODAL -->
+
+    <div id="general"> </div>
+    <form class="modal" id="modal">
+        <div class="form-content">
+            <div class="form-header">
+                <h3 id="form-title">Add New Address</h3>
+                <button type="button" id="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="form-main">
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="">
+                            Title
+                        </label>
+                        <input type="text" placeholder="Write your title" class="form-control" name="address_name">
+
+                    </div>
+                </div>
+
+                <div class="form-row grid-row">
+
+                    <div class="form-col">
+                        <label for="">
+                            First Name
+                        </label>
+                        <input type="text" placeholder="First Name" class="form-control" name="first_name">
+                    </div>
+
+                    <div class="form-col">
+                        <label for="">
+                            Last Name
+                        </label>
+                        <input type="text" placeholder="Last Name" class="form-control" name="last_name">
+                    </div>
+
+                </div>
+
+                <div class="form-row grid-row">
+
+                    <div class="form-col">
+                        <label for="">
+                            Email
+                        </label>
+                        <input type="email" placeholder="E-mail" class="form-control" name="email">
+                    </div>
+
+                    <div class="form-col">
+                        <label for="">
+                            Phone
+                        </label>
+                        <input type="text" placeholder="Phone" class="form-control" name="phone">
+
+                    </div>
+                </div>
+
+                <div class="form-row grid-row">
+
+                    <div class="form-col">
+                        <label for="">
+                            Street
+                        </label>
+                        <input type="text" placeholder="Street" class="form-control" name="street">
+                    </div>
+
+                    <div class="form-col">
+                        <label for="">
+                            Postal Code
+                        </label>
+                        <input type="text" placeholder="Phone" class="form-control" name="postalcode">
+
+                    </div>
+                </div>
+
+                <div class="form-row grid-row">
+
+                    <div class="form-col">
+                        <label for="">
+                            City
+                        </label>
+                        <input type="text" placeholder="City" class="form-control" name="city">
+                    </div>
+
+                    <div class="form-col">
+                        <label for="">
+                            Country
+                        </label>
+                        <select id="country-list" name="country">
+                            <option>Turkey</option>
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-col">
+                        <label for="">
+                            Labels
+                        </label>
+                        <select name="labels">
+                            <option value="Family">Family</option>
+                            <option value="Friends">Friends</option>
+                            <option value="College">Business</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="modal-row" id="form-button">
+
+                    <button type="submit" id="save-button">
+                        Save
+                    </button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+    <!---- END MODAL -->
+
+    <!--- ADRRESS SAVE  SECTION -->
+    <div class="address-save" id="address-save">
+        <div class="address-save-content">
+            <div class="address-save-head">
+                <i class="fa-solid fa-address-book fa-2x"></i>
+                <h2>Address <span>List</span></h2>
+            </div>
+
+            <div class="address-save-top">
+                <button type="button" class="btn" id="add-button">
+                    <span><i class="fas fa-plus"></i> Add Address</span>
+                </button>
+                <button type="button" class="btn" id="delete-button">
+                    <span><i class="fas fa-minus"></i> Delete All</span>
+                </button>
+            </div>
+
+            <div class="address-save-list" id="address-save-list">
+                <table class="address-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Address</th>
+                            <th>Labels</th>
+                            <th>By Name</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="area">
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!---- ADDRESS SAVE SECTION -->
+
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

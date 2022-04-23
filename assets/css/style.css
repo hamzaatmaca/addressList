@@ -1,0 +1,261 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --aqua-color:aqua;
+    --green:black;
+    --grey:rgb(10, 9, 9);
+    --blue:blue;
+    --carrib-green-color:#02bfae
+}
+
+body{
+    font-family: 'arial';
+    min-height: 100vh;
+}
+h1,h2,h3,h4{
+    color: black
+}
+input,button{
+    outline: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    border:none
+}
+button{
+    cursor:pointer
+}
+
+/***** FORM MODAL ******/
+#general{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.2);
+    width:100%;
+    height: 100%;
+    z-index: 1;
+    display:none
+}
+
+.modal{
+    background-color: #fff;
+    border-radius:0.6rem;
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    top:2rem;
+    left:50%;
+    transform: translateX(-50%);
+    box-shadow:0 3px 16px 0 rgba(0,0,0,0.2);
+    z-index:4
+}
+.form-header{
+    background-color: var(--aqua-color);
+    padding: 1.2rem 2.4rem;
+    font-size:1.5rem;
+    color:#fff;
+    position:relative
+}
+.form-header h3{
+    color: black;
+
+}
+#close-btn{
+    background-color: transparent;
+    font-size: 1.4rem;
+    position:absolute;
+    right: 1.5rem;
+    top:1rem;
+    display:block;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color:var(--blue);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: all 200ms ease;
+}
+#close-btn:hover{
+    transform:scale(1.1)
+}
+.form-main{
+    padding:1.2rem 2.4rem 1rem 2.4rem;
+    max-width: 580px;
+    min-width: 500px;
+}
+.form-row{
+    margin-bottom:1.2rem
+}
+.grid-row{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1.3rem;
+}
+.form-col label{
+    display: block;
+    font-weight: 700;
+    color:var(--green);
+    margin-bottom: .6rem;
+}
+.form-col input, .form-col select{
+    border:1px solid rgba(184,183,188,0.5);
+    border-radius: 3px;
+    padding: .5rem .8rem;
+    font-size:1rem;
+    font-family: inherit;
+    outline:0;
+    width:100%;
+    background-color: white;
+}
+.form-button button{
+    font-size:1.1rem;
+    color:#fff;
+    border-radius:4px;
+    padding:.6rem .2rem;
+    transition: all 200ms ease;
+}
+#form-button button:hover{
+    transform:translateY(1px)
+}
+#save-button,#update-button{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: .6rem;
+    width: 6rem;
+    height: 2rem;
+    letter-spacing: 4px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+#save-button:hover, #update-button:hover{
+    box-shadow: 0 1px 0 0 grey;
+}
+#delete-button{
+    background-color: red;
+    box-shadow: 0 2px 0 0 #8a1f23;
+}
+#delete-button:hover{
+    box-shadow: 0 1px 0 0 #8a1f23;
+}
+
+
+
+.address-save{
+    padding: 1.4rem;
+    margin:0 auto;
+    max-width: 1200px;
+    min-width:700px!important;
+    
+}
+.address-save-content{
+    background-color: white;
+    padding: 1.6rem;
+    border-radius: 4px;
+
+}
+.address-save-head{
+    padding-top:1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.address-save-head h2{
+    font-size:2.2rem;
+
+}
+.address-save-head i{
+    color: green;
+    margin-right: 1rem;
+}
+.address-save-top{
+    padding:1rem 0;
+
+}
+.address-save-top .btn{
+    color:white;
+    padding:.8rem;
+    border-radius: 3px;
+    transition: all 200ms ease;
+    background-color: green;
+    box-shadow: 0 2px 0 0 grey;
+}
+.address-save-top .btn:hover{
+    transform:translateY(2px);
+    box-shadow: 0 1px 0 0 grey;
+
+}
+.address-save-list{
+    margin:1rem 0;
+    min-height: 450px;
+
+}
+.address-table{
+    margin-top: 2rem;
+    width: 100%;
+    text-align: left;
+    border-collapse:collapse
+}
+.address-table thead{
+    border-bottom: 1px solid #e3e4f1;
+}
+.address-table thead tr th{
+    padding-bottom: .8rem;
+}
+.address-table tbody td{
+    padding:1.5rem;
+    color:rgba(0,0,0,.6);
+    font-weight: 600;
+}
+.address-table tbody td:nth-child(1){
+    padding-left:.5rem;
+    padding-right:1rem;
+
+}
+.address-table tbody td:nth-child(2){
+    font-weight: 800;
+}
+.address-table .address-name{
+    color:black
+}
+.address-table .address{
+    font-weight: 600;
+    color:rgba(0,0,0,.6)
+}
+.address-table tbody td:nth-child(3) span{
+    background-color: lightblue;
+    display: inline-block;
+    padding:.3rem .6rem;
+    border-radius:8px;
+}
+.address-table tbody tr{
+    cursor:pointer
+}
+.address-table tbody tr:hover{
+    background-color: rgba(0,0,0,0.1);
+    transition: all 200ms ease;
+}
+.address-table tbody tr:hover td, .address-table tbody tr:hover span{
+    color:green
+}
+.address-table tbody tr:hover td:nth-child(3) span{
+    background-color: #fff;
+    color:green
+}
+
+.error-message{
+    border:1px solid #d33c41!important
+}
+
+
+
+
